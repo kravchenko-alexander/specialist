@@ -13,6 +13,13 @@ gem 'rubocop'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 
+# Grape API
+gem 'grape', '0.15.0'
+gem 'grape-entity', '0.4.8'
+gem 'grape-swagger', '0.10.4'
+gem 'grape-swagger-rails', '0.3.0'
+gem 'hashie-forbidden_attributes'
+
 group :development, :test do
   gem 'byebug', platform: :mri
 end
