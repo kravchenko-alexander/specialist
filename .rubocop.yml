@@ -1,0 +1,43 @@
+AllCops:
+  Excludes:
+    - db/**
+    - config/**
+    - script/**
+    - spec/**/*
+    - config/environments/**
+    - db/migrate/**.rb
+    - config/initializers/**.rb
+
+Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/HashSyntax:
+  Enabled: false
+
+Style/AlignArray:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+  AllowHeredoc: true
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 10
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%w': '()'
