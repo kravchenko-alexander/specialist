@@ -4,6 +4,12 @@ module V1::Exceptions::Handler
   included do
     rescue_from :all do |exception|
       case exception
+      when Exceptions::LoginError
+        render_error!('LoginError', 'You entered invalid password', 401)
+      when Exceptions::InvalidGrandType
+        render_error!('InvalidGrandType', 'You entered invalid grand type', 401)
+      when Exceptions::AuthorizedError
+        render_error!('AuthorizedError', 'Invalid Access-Token', 401)
       when ActiveRecord::RecordNotFound
         render_error!('RecordNotFound', exception.message, 404)
       when ActiveRecord::RecordInvalid

@@ -5,8 +5,10 @@ class V1::API < Grape::API
   version 'v1', using: :path
   format :json
 
-  helpers V1::Helpers::TestHelper
+  helpers V1::Helpers::SessionsHelper
 
+  mount V1::Registrations
+  mount V1::Sessions
   mount V1::Test
 
   add_swagger_documentation(
