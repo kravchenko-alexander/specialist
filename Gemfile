@@ -23,6 +23,9 @@ gem 'hashie-forbidden_attributes'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'rails-perftest'
+  gem 'ruby-prof'
+  gem 'rspec'
 end
 
 group :development do

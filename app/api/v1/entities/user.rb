@@ -1,5 +1,5 @@
 class V1::Entities::User < Grape::Entity
-  format_with(:timestamp, &:to_i)
+  format_with(:timestamp, &:to_s)
 
   expose :id, documentation: { type: 'string', values: ['asjkfads89aadiof8'] }
   expose :first_name, documentation: { type: 'string', values: ['Jack'] }
